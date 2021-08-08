@@ -1,0 +1,62 @@
+doctype html
+html
+  head
+    title Shop Demo
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css')
+    style.
+      * {box-sizing: border-box;}
+      body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      }
+      .topnav {
+      overflow: hidden;
+      background-color: #e9e9e9;
+      }
+      .topnav a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      }
+      .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+      }
+      .topnav a.active {
+      background-color: #2196F3;
+      color: white;
+      }
+      .topnav input[type=text] {
+      float: right;
+      padding: 6px;
+      margin-top: 8px;
+      margin-right: 16px;
+      border: none;
+      font-size: 17px;
+      }
+  body
+    .topnav
+      a(href='#{home}') Home
+      a.active(href='#{users}') Users
+      a(href='#{addUser}') Add User
+    div(style='padding-left:16px')
+      .w3-container
+      h2 All Users
+      p All user load from database
+      table.w3-table-all
+        thead
+          tr.w3-blue
+            th Username
+            th Email
+            th Birthdate
+        tbody
+        for record in userList
+            tr 
+                td=record.username
+                td=record.email
+                td=record.birthdate

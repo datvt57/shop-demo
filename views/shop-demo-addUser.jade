@@ -1,0 +1,62 @@
+doctype html
+html
+  head
+    title Shop demo
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css')
+    style.
+      * {box-sizing: border-box;}
+      body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      }
+      .topnav {
+      overflow: hidden;
+      background-color: #e9e9e9;
+      }
+      .topnav a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      }
+      .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+      }
+      .topnav a.active {
+      background-color: #2196F3;
+      color: white;
+      }
+      .topnav input[type=text] {
+      float: right;
+      padding: 6px;
+      margin-top: 8px;
+      margin-right: 16px;
+      border: none;
+      font-size: 17px;
+      }
+  body
+    .topnav
+      a(href='#{home}') Home
+      a(href='#{users}') Users
+      a.active(href='#{addUser}') Add User
+    .w3-container.w3-blue
+      h2 Add User
+    form.w3-container(action='/shop-demo/adduser' method='POST')
+      p 
+        label User Name
+        input#username.w3-input(type='text' name='username' placeholder='a.nguyen')
+      p 
+        label Password
+        input#password.w3-input(type='password' name='password' placeholder='Password')
+      p 
+        label Email
+        input#email.w3-input(type='text' name='email' placeholder='a.nguyen@sample.com')
+      label Birthdate
+      input#birthdate.w3-input(type='text' name='birthdate' placeholder='YYYY-MM-DD')
+      p
+      input.w3-button.w3-light-blue(type='submit' value='Add User')
